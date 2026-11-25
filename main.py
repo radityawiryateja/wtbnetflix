@@ -127,7 +127,7 @@ NEGATIVE_PREFIXES = [
     "boong", "bohong", "pi boong", "kerjain", "ngerjain", "tugas", "jj", "jedag jedug", "jedag-jedug", "subs", "subscriber", "jasa tuker", "tuker uang",
     "jasa uang", "tuker nokos", "email", "gmail", "sewa", "tarot", "eh", "ah", "bikinin", "bot", "mau?", "mau ?", "ngajarin", "ba", "seller wtb", "jasa like",
     "jasa", "ss", "nokwa", "nokos wa", "wa", "whatsapp", "capcut 1d", "berlevel", "level 1", "ns", "crack", "empass", "dump", "netpriv", "privat", "private",
-    "base", "divisi", "war", "top", "coding", "web", "unsur", "b.o", "based on", "bo", "voucher", "rave", "hearo", "inc", "bud", "rp"
+    "base", "divisi", "war", "top", "coding", "web", "unsur", "b.o", "based on", "bo", "voucher", "rave", "hearo", "inc", "bud", "rp", "ubot", "nipu", "penipu"
 ]
 
 default_netflix = "https://t.me/c/3923455524/78"
