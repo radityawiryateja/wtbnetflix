@@ -128,7 +128,7 @@ NEGATIVE_PREFIXES = [
     "jasa uang", "tuker nokos", "email", "gmail", "sewa", "tarot", "eh", "ah", "bikinin", "bot", "mau?", "mau ?", "ngajarin", "ba", "seller wtb", "jasa like",
     "jasa", "ss", "nokwa", "nokos wa", "wa", "whatsapp", "capcut 1d", "berlevel", "level 1", "ns", "crack", "empass", "dump", "netpriv", "privat", "private",
     "base", "divisi", "war", "top", "coding", "web", "unsur", "b.o", "based on", "bo", "voucher", "rave", "hearo", "inc", "bud", "rp", "ubot", "nipu", "penipu",
-    "joki", "tugas"
+    "joki", "tugas", "download", "eksport"
 ]
 
 default_netflix = "https://t.me/c/3923455524/78"
@@ -143,8 +143,6 @@ KEYWORD_RULES = {
     "netf1ix": default_netflix,
     "n3tflix": default_netflix,
     "netf": default_netflix,
-    "canva": default_canva,
-    "capcut": default_capcut,
     "teleprem": default_teleprem,
     "telepreem": default_teleprem,
     "teleeprem": default_teleprem,
@@ -168,8 +166,6 @@ SELLER_KEYWORD_RULES = {
     "netf1ix": default_netflix,
     "n3tflix": default_netflix,
     "netf": default_netflix,
-    "canva": default_canva,
-    "capcut": default_capcut,
     "teleprem": default_teleprem,
     "telepreem": default_teleprem,
     "teleeprem": default_teleprem,
@@ -199,6 +195,10 @@ BASE_CUSTOM_LINKS = {
         "tel3prem": "https://t.me/c/3923455524/83",
         "prem tele": "https://t.me/c/3923455524/83",
         "premtele": "https://t.me/c/3923455524/83",
+    },
+    -1001274048263: {  
+        "canva": default_canva,
+        "capcut": default_capcut,
     }
 }
 
