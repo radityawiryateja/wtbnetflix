@@ -130,16 +130,20 @@ NEGATIVE_PREFIXES = [
     "base", "divisi", "war", "top", "coding", "web", "unsur", "b.o", "based on", "bo", "voucher", "rave", "hearo", "inc", "bud", "rp"
 ]
 
-default_link = "https://t.me/c/3923455524/78"
+default_netflix = "https://t.me/c/3923455524/78"
+default_canva = "https://t.me/c/3923455524/84"
+default_canva = "https://t.me/c/3923455524/85"
 default_teleprem = "https://t.me/c/3923455524/82"
 
 # ── RULES STANDAR (PEMBELI) ──
 KEYWORD_RULES = {
-    "netflix": default_link,
-    "netfl1x": default_link,
-    "netf1ix": default_link,
-    "n3tflix": default_link,
-    "netf": default_link,
+    "netflix": default_netflix,
+    "netfl1x": default_netflix,
+    "netf1ix": default_netflix,
+    "n3tflix": default_netflix,
+    "netf": default_netflix,
+    "canva": default_canva,
+    "capcut": default_capcut,
     "teleprem": default_teleprem,
     "telepreem": default_teleprem,
     "teleeprem": default_teleprem,
@@ -148,20 +152,23 @@ KEYWORD_RULES = {
     "tgprem": default_teleprem,
     "telprem": default_teleprem,
     "tele prem": default_teleprem,
-    "tg prem":    default_teleprem,
-    "tel3prem":    default_teleprem,
-    "prem tele":    default_teleprem,
-    "premtele":    default_teleprem,
+    "tg prem": default_teleprem,
+    "tel3prem": default_teleprem,
+    "prem tele": default_teleprem,
+    "premtele": default_teleprem,
+    "premtele": default_teleprem,
 }
 
 
 # ── RULES KHUSUS SELLER (AS SELLER / AS S) ──
 SELLER_KEYWORD_RULES = {
-    "netflix": default_link,
-    "netfl1x": default_link,
-    "netf1ix": default_link,
-    "n3tflix": default_link,
-    "netf": default_link,
+    "netflix": default_netflix,
+    "netfl1x": default_netflix,
+    "netf1ix": default_netflix,
+    "n3tflix": default_netflix,
+    "netf": default_netflix,
+    "canva": default_canva,
+    "capcut": default_capcut,
     "teleprem": default_teleprem,
     "telepreem": default_teleprem,
     "teleeprem": default_teleprem,
@@ -170,10 +177,10 @@ SELLER_KEYWORD_RULES = {
     "tgprem": default_teleprem,
     "telprem": default_teleprem,
     "tele prem": default_teleprem,
-    "tg prem":    default_teleprem,
-    "tel3prem":    default_teleprem,
-    "prem tele":    default_teleprem,
-    "premtele":    default_teleprem,
+    "tg prem": default_teleprem,
+    "tel3prem": default_teleprem,
+    "prem tele": default_teleprem,
+    "premtele": default_teleprem,
 }
 
 
@@ -187,10 +194,10 @@ BASE_CUSTOM_LINKS = {
         "tgprem": "https://t.me/c/3923455524/83",
         "telprem": "https://t.me/c/3923455524/83",
         "tele prem": "https://t.me/c/3923455524/83",
-        "tg prem":    "https://t.me/c/3923455524/83",
-        "tel3prem":    "https://t.me/c/3923455524/83",
-        "prem tele":    "https://t.me/c/3923455524/83",
-        "premtele":    "https://t.me/c/3923455524/83",
+        "tg prem": "https://t.me/c/3923455524/83",
+        "tel3prem": "https://t.me/c/3923455524/83",
+        "prem tele": "https://t.me/c/3923455524/83",
+        "premtele": "https://t.me/c/3923455524/83",
     }
 }
 
