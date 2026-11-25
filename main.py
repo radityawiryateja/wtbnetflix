@@ -127,7 +127,7 @@ NEGATIVE_PREFIXES = [
     "boong", "bohong", "pi boong", "kerjain", "ngerjain", "tugas", "jj", "jedag jedug", "jedag-jedug", "subs", "subscriber", "jasa tuker", "tuker uang",
     "jasa uang", "tuker nokos", "email", "gmail", "sewa", "tarot", "eh", "ah", "bikinin", "bot", "mau?", "mau ?", "ngajarin", "ba", "seller wtb", "jasa like",
     "jasa", "ss", "nokwa", "nokos wa", "wa", "whatsapp", "capcut 1d", "berlevel", "level 1", "ns", "crack", "empass", "dump", "netpriv", "privat", "private",
-    "base", "divisi", "war", "top", "coding", "web", "unsur", "b.o", "based on", "bo", "voucher", "rave", "hearo"
+    "base", "divisi", "war", "top", "coding", "web", "unsur", "b.o", "based on", "bo", "voucher", "rave", "hearo", "inc", "bud", "rp"
 ]
 
 default_link = "https://t.me/c/3923455524/78"
@@ -151,7 +151,25 @@ SELLER_KEYWORD_RULES = {
     "netf": default_link,
 }
 
-ADDON_TEXT_WITH_SIGN = "Sini nder, fast. Akun strong + less problem. Avail login by code aja (no empass) dijamin aman sentosa. Kalau ada kendala, fast fixing di bawah 24 jam."
+
+BASE_CUSTOM_LINKS = {
+    -1001525948158: {  
+        "teleprem": "https://t.me/c/3923455524/81",
+        "telepreem": "https://t.me/c/3923455524/81",
+        "teleeprem": "https://t.me/c/3923455524/81",
+        "telepremm": "https://t.me/c/3923455524/81",
+        "telepremmm": "https://t.me/c/3923455524/81",
+        "tgprem": "https://t.me/c/3923455524/81",
+        "telprem": "https://t.me/c/3923455524/81",
+        "tele prem": "https://t.me/c/3923455524/81",
+        "tg prem":    "https://t.me/c/3923455524/81",
+        "tel3prem":    "https://t.me/c/3923455524/81",
+        "prem tele":    "https://t.me/c/3923455524/81",
+        "premtele":    "https://t.me/c/3923455524/81",
+    }
+}
+
+ADDON_TEXT_WITH_SIGN = "Sini nder, fast process lagi on (bisa liat last seen @hughtons). Kalau ada kendala, fast fixing no cacicu."
 
 # ==========================================
 # 3a. KONFIGURASI USERNAME MANUAL PER USERBOT (BARU)
@@ -169,11 +187,11 @@ ADDON_TEXT_WITH_SIGN = "Sini nder, fast. Akun strong + less problem. Avail login
 #
 # Index list = index urutan SESSION di .env (UBOT_SESSION_1 -> index 0, dst).
 UBOT_USERNAME_CONFIG = [
-    {"username": "hughtons", "order": "nettflixapp"},    # Userbot 1
-    {"username": "hughtons", "order": "nettflixapp"},   # Userbot 2
-    {"username": "hughtons", "order": "nettflixapp"},    # Userbot 3
-    {"username": "hughtons", "order": "nettflixapp"},     # Userbot 4
-    {"username": "hughtons", "order": "nettflixapp"},     # Userbot 5
+    {"username": "hughtons", "order": "nettflixapp", "botdecav": "decavstore"},  # Userbot 1
+    {"username": "hughtons", "order": "nettflixapp", "botdecav": "decavstore"},  # Userbot 2
+    {"username": "hughtons", "order": "nettflixapp", "botdecav": "decavstore"},  # Userbot 3
+    {"username": "hughtons", "order": "nettflixapp", "botdecav": "decavstore"},  # Userbot 4
+    {"username": "hughtons", "order": "nettflixapp", "botdecav": "decavstore"},  # Userbot 5
 ]
 
 def format_tag(raw_username, needs_sign):
@@ -870,6 +888,7 @@ async def auto_comment_handler(event):
                 # tiap kali pakai wording.
                 formatted_username = await get_manual_tag(current_sender, idx_to_try, needs_sign, "username")
                 formatted_order = await get_manual_tag(current_sender, idx_to_try, needs_sign, "order")
+                formatted_botdecav = await get_manual_tag(current_sender, idx_to_try, needs_sign, "botdecav")
 
                 template_text = html.unparse(source_msg.message, source_msg.entities)
                 # .replace() aman walau placeholder-nya gak ada di template --
@@ -878,6 +897,7 @@ async def auto_comment_handler(event):
                     template_text
                     .replace("{username}", formatted_username)
                     .replace("{bot}", formatted_order)
+                    .replace("{botdecav}", formatted_botdecav)
                 )
 
                 if source_msg.media:
