@@ -132,7 +132,7 @@ NEGATIVE_PREFIXES = [
 
 default_netflix = "https://t.me/c/3923455524/78"
 default_canva = "https://t.me/c/3923455524/84"
-default_canva = "https://t.me/c/3923455524/85"
+default_capcut = "https://t.me/c/3923455524/85"
 default_teleprem = "https://t.me/c/3923455524/82"
 
 # ── RULES STANDAR (PEMBELI) ──
