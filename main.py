@@ -131,6 +131,7 @@ NEGATIVE_PREFIXES = [
 ]
 
 default_link = "https://t.me/c/3923455524/78"
+default_teleprem = "https://t.me/c/3923455524/82"
 
 # ── RULES STANDAR (PEMBELI) ──
 KEYWORD_RULES = {
@@ -139,6 +140,18 @@ KEYWORD_RULES = {
     "netf1ix": default_link,
     "n3tflix": default_link,
     "netf": default_link,
+    "teleprem": default_teleprem,
+    "telepreem": default_teleprem,
+    "teleeprem": default_teleprem,
+    "telepremm": default_teleprem,
+    "telepremmm": default_teleprem,
+    "tgprem": default_teleprem,
+    "telprem": default_teleprem,
+    "tele prem": default_teleprem,
+    "tg prem":    default_teleprem,
+    "tel3prem":    default_teleprem,
+    "prem tele":    default_teleprem,
+    "premtele":    default_teleprem,
 }
 
 
@@ -149,23 +162,35 @@ SELLER_KEYWORD_RULES = {
     "netf1ix": default_link,
     "n3tflix": default_link,
     "netf": default_link,
+    "teleprem": default_teleprem,
+    "telepreem": default_teleprem,
+    "teleeprem": default_teleprem,
+    "telepremm": default_teleprem,
+    "telepremmm": default_teleprem,
+    "tgprem": default_teleprem,
+    "telprem": default_teleprem,
+    "tele prem": default_teleprem,
+    "tg prem":    default_teleprem,
+    "tel3prem":    default_teleprem,
+    "prem tele":    default_teleprem,
+    "premtele":    default_teleprem,
 }
 
 
 BASE_CUSTOM_LINKS = {
     -1001525948158: {  
-        "teleprem": "https://t.me/c/3923455524/81",
-        "telepreem": "https://t.me/c/3923455524/81",
-        "teleeprem": "https://t.me/c/3923455524/81",
-        "telepremm": "https://t.me/c/3923455524/81",
-        "telepremmm": "https://t.me/c/3923455524/81",
-        "tgprem": "https://t.me/c/3923455524/81",
-        "telprem": "https://t.me/c/3923455524/81",
-        "tele prem": "https://t.me/c/3923455524/81",
-        "tg prem":    "https://t.me/c/3923455524/81",
-        "tel3prem":    "https://t.me/c/3923455524/81",
-        "prem tele":    "https://t.me/c/3923455524/81",
-        "premtele":    "https://t.me/c/3923455524/81",
+        "teleprem": "https://t.me/c/3923455524/83",
+        "telepreem": "https://t.me/c/3923455524/83",
+        "teleeprem": "https://t.me/c/3923455524/83",
+        "telepremm": "https://t.me/c/3923455524/83",
+        "telepremmm": "https://t.me/c/3923455524/83",
+        "tgprem": "https://t.me/c/3923455524/83",
+        "telprem": "https://t.me/c/3923455524/83",
+        "tele prem": "https://t.me/c/3923455524/83",
+        "tg prem":    "https://t.me/c/3923455524/83",
+        "tel3prem":    "https://t.me/c/3923455524/83",
+        "prem tele":    "https://t.me/c/3923455524/83",
+        "premtele":    "https://t.me/c/3923455524/83",
     }
 }
 
@@ -855,6 +880,13 @@ async def auto_comment_handler(event):
 
     matched_kw = found_keywords[0]
     matched_link = active_rules[matched_kw][1]
+
+    # 🔥 Cek apakah base ini punya link wording khusus 🔥
+    base_overrides = BASE_CUSTOM_LINKS.get(event.chat_id, {})
+    if matched_kw in base_overrides:
+        matched_link = base_overrides[matched_kw]
+    elif "_default" in base_overrides:
+        matched_link = base_overrides["_default"]
 
     try:
         # Delay diperkecil (dulu 1.5-3s) dan dijalankan PARALEL bareng fetch
